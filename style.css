@@ -25,6 +25,7 @@ a,
 a:active,
 a:visited,
 a:link {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -104,6 +105,10 @@ a:link {
   transform: translateY(-50%);
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 .main-wrapper {
   margin: 40px auto;
   max-width: 1200px;
@@ -142,10 +147,12 @@ a:link {
 }
 
 .contacts-list .list-marker {
+  padding-right: 10px;
   text-transform: capitalize;
 }
 
 .contacts-list .list-link {
+  color: #828891;
 }
 
 .sidebar-list--marked .list-item:before {
