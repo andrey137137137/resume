@@ -162,6 +162,7 @@ a:link {
 .contacts-list .list-marker {
   padding-right: 10px;
   text-transform: capitalize;
+  font-weight: bold;
 }
 
 .contacts-list .list-link {
