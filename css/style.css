@@ -107,11 +107,12 @@ a:link {
 .list--marked .list-item:before {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 10px;
+  border-radius: 50%;
   width: 4px;
   height: 4px;
   content: "";
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
 
 .link:hover {
@@ -120,20 +121,25 @@ a:link {
 
 .main-wrapper {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   margin: 40px auto;
+  min-width: 320px;
   max-width: 1200px;
   background-color: #ffffff;
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar {
-  position: absolute;
+  /* position: absolute;
   left: 0;
   top: 0;
-  float: left;
+  float: left; */
   padding-top: 40px;
-  width: 370px;
-  height: 100%;
+  width: 100%;
+  /* height: 100%; */
+  min-width: 320px;
+  max-width: 370px;
   color: #ffffff;
   background-color: #1e2939;
 }
@@ -178,14 +184,16 @@ a:link {
 }
 
 .main {
-  margin-left: 370px;
+  /* margin-left: 370px; */
   padding: 108px 50px 107px;
-  width: 830px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 830px;
 }
 
 .main-desc {
   margin-bottom: 64px;
-  width: 413px;
+  max-width: 413px;
 }
 
 .portfolio {
@@ -194,6 +202,49 @@ a:link {
 
 .portfolio-title {
   margin-bottom: 12px;
+}
+
+.portfolio-list {
+  max-width: 486px;
+}
+
+.portfolio-list .list-item,
+.portfolio-list .list-link {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-list .list-number,
+.portfolio-techs:before,
+.portfolio-techs:after {
+  font-weight: 700;
+  color: #000000;
+}
+
+.portfolio-list .list-number {
+  display: block;
+  margin-right: 9px;
+}
+
+.portfolio-list_dots {
+  flex-grow: 1;
+  display: block;
+  height: 17px;
+  min-width: 107px;
+  border-bottom: 1px dotted #a8a8a8;
+}
+
+.portfolio-techs {
+  display: block;
+  min-width: 138px;
+}
+
+.portfolio-techs:before {
+  content: "[ ";
+}
+
+.portfolio-techs:after {
+  content: " ]";
 }
 
 .experience {
@@ -224,4 +275,16 @@ a:link {
 }
 
 .experience-block_title {
+}
+
+.experience-list .list-item:before {
+  background-color: #595959;
+}
+
+.experience-list .list-item {
+  padding-left: 13px;
+}
+
+.education-title {
+  margin-bottom: 15px;
 }
