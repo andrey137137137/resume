@@ -91,8 +91,10 @@ a:link {
 
 .section-title--large {
   margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 45px;
-  line-height: 89px;
+  line-height: 45px;
 }
 
 .img_wrapper {
@@ -102,7 +104,7 @@ a:link {
 
 .img_wrapper-img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 .list--marked .list-item,
@@ -187,8 +189,8 @@ a:link {
 
 .main {
   /* margin-left: 370px; */
-  padding-top: 108px;
-  padding-bottom: 107px;
+  padding-top: 52px;
+  padding-bottom: 52px;
 }
 
 .main-desc {
@@ -208,20 +210,52 @@ a:link {
   max-width: 486px;
 }
 
-.portfolio-list .list-item_content {
+.portfolio-list .list-item_content,
+.portfolio-techs_wrapper {
   display: flex;
+}
+
+.portfolio-list .list-item_content {
   flex-wrap: wrap;
+  width: 100%;
+}
+
+.portfolio-list .list-link {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.portfolio-list .list-link,
+.portfolio-list_dots,
+.portfolio-techs {
+  display: block;
+}
+
+.portfolio-techs_wrapper,
+.portfolio-list_dots {
+  flex-grow: 1;
+}
+
+.portfolio-techs_wrapper {
+  margin-left: -21px;
+}
+
+.portfolio-list_dots {
+  margin-right: 8px;
+  height: 17px;
+  min-width: 35px;
+  border-bottom: 1px dotted #a8a8a8;
+}
+
+.portfolio-techs {
+  min-width: 138px;
 }
 
 .portfolio-techs:before,
 .portfolio-techs:after {
   font-weight: 700;
   color: #000000;
-}
-
-.portfolio-list .list-link,
-.portfolio-techs {
-  display: block;
 }
 
 .portfolio-techs:before {
@@ -244,8 +278,14 @@ a:link {
   margin-bottom: 18px;
 }
 
+.main-section_title {
+  margin-bottom: 4px;
+}
+
 .status {
-  margin: 4px 0 3px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
   font-size: 12px;
   color: #a8a8a8;
 }
@@ -271,6 +311,10 @@ a:link {
   margin-bottom: 15px;
 }
 
+.education-small_title {
+  margin-bottom: 3px;
+}
+
 @media only screen and (min-width: 640px) {
   .main-wrapper {
     position: relative;
@@ -289,24 +333,18 @@ a:link {
   }
 
   .sidebar-photo {
-    max-height: 354px;
+    height: 354px;
   }
 
   .img_wrapper-img {
     width: auto;
-    max-height: 100%;
+    height: 100%;
   }
 
-  .portfolio-list_dots {
-    display: block;
-    flex-grow: 1;
-    height: 17px;
-    min-width: 107px;
-    border-bottom: 1px dotted #a8a8a8;
-  }
-
-  .portfolio-techs {
-    min-width: 138px;
+  .main {
+    /* margin-left: 370px; */
+    padding-top: 108px;
+    padding-bottom: 107px;
   }
 }
 
